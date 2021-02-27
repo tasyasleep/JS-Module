@@ -84,7 +84,11 @@ class CreateTask {
     validationForm() {
         const createItem = document.querySelector('#saveBtn');
         createItem.addEventListener('click', e => {
-            const taskInfo = { start: '', duration: '', title: '' };
+            const taskInfo = { 
+                start: '', 
+                duration: '', 
+                title: ''
+            };
             const renderInfo = (elem) => {
                 const inp = elem.split(':');
                 return +inp[0] * 60 + (+inp[1])
