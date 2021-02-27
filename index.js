@@ -98,10 +98,14 @@ class CreateTask {
                 const arrTask = sheduleTasks.filter(el =>
                     el.start <= taskInfo.start + taskInfo.duration && el.start + el.duration >= taskInfo.start
                 )
-                sheduleTasks.push(taskInfo);
-                sheduleTasks.sort((a, b) => a.start - b.start);
-                this.createItemsFromForm();
-                this.showModal()
+               if (arrTask.length < 2) {
+                    sheduleTasks.push(taskInfo);
+                    sheduleTasks.sort((a, b) => a.start - b.start);
+                    this.createItemsFromForm();
+                    this.showModal()
+                } else {
+                    alert('You can create only two task')
+                }
             }
         })
 
