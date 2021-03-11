@@ -93,8 +93,8 @@ class CreateTask {
                 const inp = elem.split(':');
                 return +inp[0] * 60 + (+inp[1])
             }
-            taskInfo.start = renderInfo(choseTime.value) - 8 * 60;
-            taskInfo.duration = renderInfo(duration.value) - 8 * 60 - taskInfo.start;
+            taskInfo.start = renderInfo(choseTime.value) - 480;
+            taskInfo.duration = renderInfo(duration.value) - 480 - taskInfo.start;
             taskInfo.color = changeColor.value;
             taskInfo.title = createTitle.value;
 
