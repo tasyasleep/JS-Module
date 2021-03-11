@@ -129,8 +129,7 @@ class CreateTask {
         let taskMain = '';
         taskContainer2.innerHTML = '';
         sheduleTasks.forEach((taskInfo, index, arr) => {
-            const shedule = Math.floor((taskInfo.start + 8 * 60) / 60) + ":" + (((taskInfo.start + 8 * 60) % 60 == 0) ? "00" : (taskInfo.start + 8 * 60) % 60);
-            const taskInShedule = cElem('div');
+           const taskInShedule = cElem('div');
             taskInShedule.setAttribute("data-key", index);
             if (index === 0) {
                 arr.length > 1 && taskInfo.start + taskInfo.duration > arr[index + 1].start ?
