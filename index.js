@@ -68,18 +68,7 @@ class CreateTask {
         this.validationForm();
         this.showForm();
     }
-      deleteTask() {
-        const sT = localStorage.getItem('activities');
-        if (st !== null) {
-            const tasks = JSON.parse(sT);
-            Object.assign(this, tasks)
-
-        }
-    }
-    saveTask() {
-        const sT = JSON.stringify(this);
-        localStorage.setItem('activities', sT)
-    }
+  
 
     showForm() {
         const formContainer = document.querySelector('.form-container');
